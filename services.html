@@ -8,7 +8,7 @@
     <meta name="description" content="Entertainment, Shopping and Fun">
     <meta name="keywords" content="shopping, fun, entertainment, offers">
     <!-- Title -->
-    <title>Max5 Shopping and Entertainment</title>
+    <title>Max5 Beauty and Spa</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
@@ -20,35 +20,57 @@
     <nav>
         <ul id="menu">
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="discounts.html">Discounts</a></li>
+            <li><a href="services.html">Services, Price and Appointment</a></li>
         </ul>
     </nav>
 
     <main>
-        <ul id="service">Service and Price (in Euro)
-            <li>Body
-                <ul>
-                    <li>Thai Massage - 100</li>
-                    <li>Indian Massge - 100</li>
-                    <li>Hot Tub - 80</li>
-                    <li>Waxing - 100</li>
-                    <li>Pedicure and Manicure -70</li>
-                </ul>
-
-            <li>Face
-                <ul>
-                    <li>Fruit Facial -50</li>
-                    <li>Pearl Facial -50</li>
-                    <li>Herbal Facial -40</li>
-                    <li>Gold Facial -60</li>
-                </ul>
-
-            
-        </ul>
+        <div id="sel">
+        <p> Select a Service:
+            <select id="selector">
+                <option value="100">Spa</option>
+                <option value="90">Sauna</option>
+                <option value="50">Facial</option>
+                <option value="60">Waxing</option>
+                <option value="70">Pedicure and Manicure</option>
+                <option value="120">Thai Massage</option>
+                <option value="120">Indian Massage</option>
+            </select>
+        </p>
+        <br>
+        <button class ="BtnService" onclick="getOption()"> Service Price</button>
+        <p> Price in Euro:
+            <span class="price"></span>
+        </p>
+        <br>
+        <button class ="BtnService" onclick="getDiscount()"> Get a Discount from 100 Euro Cost</button>
+        <p> Discount:
+            <span class="discount"></span>
+        </p>
+        <br>
+    </div>
+        <div id="booking">
+            <h2>Book an Appointment</h2>
+            <div class="calendar">
+                <div class="month">
+                    <i class="fa-solid fa-left-long"></i>
+                    <div class="day">July 2024</div>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="days">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+              </div>
     </main>
     <!-- Footer -->
     <footer>
-        <div id="social-networks-links">
+        <div id="social-networks-links-service">
             <h2 id="social-media">Social Media Links</h2>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Link to Facebook"><i
                     class="fa-brands fa-facebook"></i></a>
@@ -69,6 +91,8 @@
     </footer>
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/dc1461ab12.js" crossorigin="anonymous"></script>
+    <!-- Javascript Files-->
+    <script src="assets/js/script.js" defer></script>
 
 </body>
 

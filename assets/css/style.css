@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    background-color: aliceblue;
 }
 /*Nav*/
 #menu {
@@ -22,6 +23,20 @@
     background: url("../images/hero-image.webp") no-repeat center center/cover;
     background-size: cover;
 }
+
+
+/*Services*/
+#service {
+    color:rgb(71, 18, 2);
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    text-shadow: 1px 1px 3px rgb(155, 109, 95);
+    line-height: 2rem;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
 
 /*Welcome*/
 #welcome-text{
@@ -40,9 +55,46 @@
     letter-spacing: 0.125rem;
     line-height: 2rem;
     text-shadow: 1px 1px 3px rgb(176, 168, 218);
-    text-align: center;
     margin-inline: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+
+#sel {
+    padding-top: 2rem;
+    color: rgb(49, 32, 126);
+    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#selector{
+    color: rgb(49, 32, 126);
+    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: rgb(31, 30, 29);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.BtnService{
+    background-color: rgb(176, 168, 218);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 5px;
+}
+
+#discount{
+   
+    color: rgb(49, 32, 126);
+    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+}
+
+
+
+#social-networks-links-service {
+   margin-top: 340px;
+   text-align: center;
 }
 
 /*Footer*/
