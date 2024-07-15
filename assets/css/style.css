@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/*Nav*/
+#menu {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    list-style-type: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+/*Hero*/
+#hero {
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    background-size: cover;
+}
+
+/*Welcome*/
+#welcome-text{
+    color:rgb(51, 2, 2);
+    text-shadow: 1px 1px 3px rgb(187, 87, 20);
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    text-align: center;
+}
+
+
+/*Address*/
+#address-text {
+    color: rgb(49, 32, 126);
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    line-height: 2rem;
+    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    text-align: center;
+    margin-inline: 20px;
+    margin-bottom: 40px;
+}
+
+/*Footer*/
+footer {
+    background-color: rgb(248, 240, 226);
+}
+
+#social-networks-links {
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
