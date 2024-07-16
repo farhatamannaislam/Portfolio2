@@ -24,7 +24,6 @@
     background-size: cover;
 }
 
-
 /*Welcome*/
 #welcome-text {
     color: rgb(51, 2, 2);
@@ -64,7 +63,6 @@
 }
 
 
-
 #sel {
     padding-top: 2rem;
     color: rgb(49, 32, 126);
@@ -82,17 +80,16 @@
     text-align: center;
 }
 
+#discount {
+    color: rgb(49, 32, 126);
+    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+}
+
 
 .BtnService {
     background-color: rgb(176, 168, 218);
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     border-radius: 5px;
-}
-
-#discount {
-
-    color: rgb(49, 32, 126);
-    text-shadow: 1px 1px 3px rgb(176, 168, 218);
 }
 
 #booking {
@@ -101,7 +98,7 @@
     text-shadow: 1px 1px 3px rgb(155, 109, 95);
 }
 
-
+/*Calendar*/
 .servicecalendar .month {
     width: 100%;
     height: 150px;
@@ -113,7 +110,6 @@
     font-weight: 500;
 }
 
-
 .servicecalendar .month .nextmonth {
     cursor: pointer;
 }
@@ -121,7 +117,6 @@
 .servicecalendar .month .nextmonth:hover, .servicecalendar .month .previousmonth:hover {
     color: lightcoral;
 }
-
 
 .servicecalendar .daysofweek {
     width: 100%;
@@ -151,6 +146,7 @@
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 20px;
+    color:green;
 }
 
 .servicecalendar .daysofmonth .day {
@@ -161,6 +157,10 @@
     justify-content: center;
     cursor: pointer;
     border: 1px solid #6d6969;
+}
+
+.red {
+    color: red;
 }
 
 /*Footer*/

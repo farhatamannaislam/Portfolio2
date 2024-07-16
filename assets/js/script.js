@@ -47,7 +47,6 @@ const monthsofYear = [
 
 /*Get current months days,previous month days and next month days*/
 function addCalendar() {
-    let i;
     const dateFirst = new Date(year, month, 1);
     const dateLast = new Date(year, month + 1, 0);
     const previousLastDate = new Date(year, month, 0);
@@ -58,30 +57,33 @@ function addCalendar() {
 
     date.innerHTML = monthsofYear[month] + " " + year;
 
-    let day = "";
-    //Days of Previous Month
-    for (i = firstDay; i > 0; i--) {
-        day += `<div class="day">${prevDay - i + 1}</div>`;
+    let dayHTML = "";
+
+    // Days of Previous Month
+    for (let i = firstDay; i > 0; i--) {
+        let prevDate = prevDay - i + 1;
+        let currentDate = new Date(year, month - 1, prevDate);
+        dayHTML += generateDayHTML(prevDate, currentDate.getDay() === 0);
     }
 
-    //Days of Current Month
-    for (i = 1; i <= lastDay; i++) {
-        day += `<div class="day">${i}</div>`;
+    // Days of Current Month
+    for (let i = 1; i <= lastDay; i++) {
+        let currentDate = new Date(year, month, i);
+        dayHTML += generateDayHTML(i, currentDate.getDay() === 0);
     }
 
-    //Days of Next Month
-    for (i = 1; i <= nextDay; i++) {
-        day += `<div class="day">${i}</div>`;
+    // Days of Next Month
+    for (let i = 1; i <= nextDay; i++) {
+        let currentDate = new Date(year, month + 1, i);
+        dayHTML += generateDayHTML(i, currentDate.getDay() === 0);
     }
 
-        if (daysofweek.innerHTML== "Sunday") {
-            daysofmonth.style.color = "red";
-            daysofmonth.innerHTML = day;
-        } else {
-            daysofmonth.style.color = "green";
-            daysofmonth.innerHTML = day;
-        }
+    daysofmonth.innerHTML = dayHTML;
+}
 
+// Helper function to generate day elements
+function generateDayHTML(day, isSunday) {
+    return `<div class="day${isSunday ? ' red' : ''}">${day}</div>`;
 }
 
 //Show previousMonth
