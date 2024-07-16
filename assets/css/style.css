@@ -163,18 +163,6 @@
     border: 1px solid #6d6969;
 }
 
-#container {
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-
 /*Footer*/
 
 #social-networks-links {
