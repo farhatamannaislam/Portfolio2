@@ -5,6 +5,7 @@ date = document.querySelector(".date");
 previous = document.querySelector(".previous");
 next = document.querySelector(".next");
 daysofmonth = document.querySelector(".daysofmonth ");
+daysofweek = document.querySelector(".daysofweek");
 nextmonth = document.querySelector(".nextmonth");
 previousmonth = document.querySelector(".previousmonth");
 
@@ -27,6 +28,7 @@ function getDiscount() {
         document.querySelector('.discount').textContent = discount - discount * 0.1;
 
 }
+
 
 const monthsofYear = [
     "January",
@@ -72,19 +74,25 @@ function addCalendar() {
         day += `<div class="day">${i}</div>`;
     }
 
+        if (daysofweek.innerHTML== "Sunday") {
+            daysofmonth.style.color = "red";
+            daysofmonth.innerHTML = day;
+        } else {
+            daysofmonth.style.color = "green";
+            daysofmonth.innerHTML = day;
+        }
 
-    daysofmonth.innerHTML = day;
 }
 
 //Show previousMonth
 function previousMonth() {
     month--;
     if (month < 0) {
-      month = 11;
-      year--;
+        month = 11;
+        year--;
     }
     addCalendar();
-  }
+}
 
 //Show next Month
 function nextMonth() {
@@ -95,8 +103,6 @@ function nextMonth() {
     }
     addCalendar();
 }
-
-
 
 nextmonth.addEventListener("click", nextMonth);
 previousmonth.addEventListener("click", previousMonth);
