@@ -12,6 +12,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <title>Service Selector</title>
 </head>
 
 <body>
@@ -28,25 +29,21 @@
         <div id="sel">
             <p> Select a Service:
                 <select id="selector">
-                    <option value="100">Spa</option>
-                    <option value="90">Sauna</option>
-                    <option value="50">Facial</option>
-                    <option value="60">Waxing</option>
-                    <option value="70">Pedicure and Manicure</option>
-                    <option value="120">Thai Massage</option>
-                    <option value="120">Indian Massage</option>
+                    <option value="100">Spa - 100 Euro</option>
+                    <option value="90">Sauna - 90 Euro</option>
+                    <option value="50">Facial - 50 Euro</option>
+                    <option value="60">Waxing - 60 Euro</option>
+                    <option value="70">Pedicure and Manicure - 70 Euro</option>
+                    <option value="120">Thai Massage - 120 Euro</option>
+                    <option value="120">Indian Massage - 120 Euro</option>
                 </select>
             </p>
             <br>
-            <button class="BtnService" onclick="getOption()"> Service Price</button>
-            <p> Price in Euro:
-                <span class="price"></span>
-            </p>
+            <button class="BtnService" onclick="addService()"> Add Service</button>
+            <div id="serviceList"></div>
+            <p>Total Price (in Euro): <span class="totalPrice">0.00</span></p>
             <br>
-            <button class="BtnService" onclick="getDiscount()"> Get a Discount from 100 Euro Cost</button>
-            <p> Discount:
-                <span class="discount"></span>
-            </p>
+            <p>Total Discounted Price(in Euro): <span class="totalDiscount">0.00</span></p>
             <br>
         </div>
         <div id="booking">

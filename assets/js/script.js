@@ -1,34 +1,35 @@
-console.log("Hello");
+
 const selectService = document.querySelector("#selector");
-const servicecalendar = document.querySelector(".servicecalendar");
 date = document.querySelector(".date");
-previous = document.querySelector(".previous");
-next = document.querySelector(".next");
 daysofmonth = document.querySelector(".daysofmonth ");
 daysofweek = document.querySelector(".daysofweek");
 nextmonth = document.querySelector(".nextmonth");
 previousmonth = document.querySelector(".previousmonth");
-
+const serviceList = document.getElementById("serviceList");
+let services = [];
 
 let today = new Date();
-let activeDay;
 let month = today.getMonth();
 let year = today.getFullYear();
 
-function getOption() {
-
-    price = selectService.value;
-    document.querySelector('.price').textContent = price;
+function addService() {
+    let price = parseFloat(selector.value);
+    services.push(price);
+    
+    let serviceItem = document.createElement('p');
+    serviceItem.textContent = `Service - ${price.toFixed(2)} Euro`;
+    serviceList.appendChild(serviceItem);
+    
+    updateTotals();
 }
 
-function getDiscount() {
-
-    discount = selectService.value;
-    if (discount >= 100)
-        document.querySelector('.discount').textContent = discount - discount * 0.1;
-
+function updateTotals() {
+    let totalPrice = services.reduce((sum, price) => sum + price, 0);
+    let totalDiscount = totalPrice >= 100 ? totalPrice * 0.9 : totalPrice;
+    
+    document.querySelector('.totalPrice').textContent = totalPrice.toFixed(2);
+    document.querySelector('.totalDiscount').textContent = totalDiscount.toFixed(2);
 }
-
 
 const monthsofYear = [
     "January",
