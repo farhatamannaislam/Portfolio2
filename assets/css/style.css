@@ -174,46 +174,6 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-#addAppointment,
-#viewAppointment {
-    width: 350px;
-    padding: 25px;
-    z-index: 20;
-}
-
-#addAppointment h2,
-#viewAppointment h2 {
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-#textTitle {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: 1px solid #cbd4c2;
-    font-size: 16px;
-}
-
-#btnS {
-    background-color: #2ed573;
-}
-
-.btnC {
-    background-color: #67696d;
-}
-
-#btnD {
-    background-color: #994c4e;
-}
-
-
-#viewAppointment p {
-    margin-bottom: 20px;
-}
 
 /*Footer*/
 
