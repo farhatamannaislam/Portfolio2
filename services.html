@@ -26,47 +26,50 @@
 
     <main>
         <div id="sel">
-        <p> Select a Service:
-            <select id="selector">
-                <option value="100">Spa</option>
-                <option value="90">Sauna</option>
-                <option value="50">Facial</option>
-                <option value="60">Waxing</option>
-                <option value="70">Pedicure and Manicure</option>
-                <option value="120">Thai Massage</option>
-                <option value="120">Indian Massage</option>
-            </select>
-        </p>
-        <br>
-        <button class ="BtnService" onclick="getOption()"> Service Price</button>
-        <p> Price in Euro:
-            <span class="price"></span>
-        </p>
-        <br>
-        <button class ="BtnService" onclick="getDiscount()"> Get a Discount from 100 Euro Cost</button>
-        <p> Discount:
-            <span class="discount"></span>
-        </p>
-        <br>
-    </div>
+            <p> Select a Service:
+                <select id="selector">
+                    <option value="100">Spa</option>
+                    <option value="90">Sauna</option>
+                    <option value="50">Facial</option>
+                    <option value="60">Waxing</option>
+                    <option value="70">Pedicure and Manicure</option>
+                    <option value="120">Thai Massage</option>
+                    <option value="120">Indian Massage</option>
+                </select>
+            </p>
+            <br>
+            <button class="BtnService" onclick="getOption()"> Service Price</button>
+            <p> Price in Euro:
+                <span class="price"></span>
+            </p>
+            <br>
+            <button class="BtnService" onclick="getDiscount()"> Get a Discount from 100 Euro Cost</button>
+            <p> Discount:
+                <span class="discount"></span>
+            </p>
+            <br>
+        </div>
         <div id="booking">
             <h2>Book an Appointment</h2>
-            <div class="calendar">
+            <div class="servicecalendar">
                 <div class="month">
-                    <i class="fa-solid fa-left-long"></i>
-                    <div class="day">July 2024</div>
-                    <i class="fa-solid fa-right-long"></i>
+                    <i class="fa-solid fa-left-long previous"></i>
+                    <div class="date"></div>
+                    <i class="fa-solid fa-right-long nextmonth"></i>
                 </div>
+                <div class="daysofweek">
+                    <div>Sunday</div>
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                </div>
+                <!--Get Days of Month from JavaScript-->
+                <div class="daysofmonth"> </div>
             </div>
-            <div class="days">
-                <div>Sunday</div>
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thursday</div>
-                <div>Friday</div>
-                <div>Saturday</div>
-              </div>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
