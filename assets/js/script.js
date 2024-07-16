@@ -1,11 +1,12 @@
 console.log("Hello");
-const selectService = document.querySelector('#selector');
-const servicecalendar = document.querySelector('servicecalendar');
+const selectService = document.querySelector("#selector");
+const servicecalendar = document.querySelector(".servicecalendar");
 date = document.querySelector(".date");
 previous = document.querySelector(".previous");
 next = document.querySelector(".next");
 daysofmonth = document.querySelector(".daysofmonth ");
 nextmonth = document.querySelector(".nextmonth");
+previousmonth = document.querySelector(".previousmonth");
 
 
 let today = new Date();
@@ -75,9 +76,17 @@ function addCalendar() {
     daysofmonth.innerHTML = day;
 }
 
-addCalendar();
+//Show previousMonth
+function previousMonth() {
+    month--;
+    if (month < 0) {
+      month = 11;
+      year--;
+    }
+    addCalendar();
+  }
 
-
+//Show next Month
 function nextMonth() {
     month++;
     if (month > 11) {
@@ -88,4 +97,8 @@ function nextMonth() {
 }
 
 
+
 nextmonth.addEventListener("click", nextMonth);
+previousmonth.addEventListener("click", previousMonth);
+
+addCalendar();

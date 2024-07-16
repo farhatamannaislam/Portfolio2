@@ -118,7 +118,7 @@
     cursor: pointer;
 }
 
-.servicecalendar .month .nextmonth:hover {
+.servicecalendar .month .nextmonth:hover, .servicecalendar .month .previousmonth:hover {
     color: lightcoral;
 }
 
@@ -163,12 +163,56 @@
     border: 1px solid #6d6969;
 }
 
+#container {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
-#social-networks-links-service {
-    margin-top: 340px;
-    text-align: center;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    font-size: 500;
+#addAppointment,
+#viewAppointment {
+    width: 350px;
+    padding: 25px;
+    z-index: 20;
+}
+
+#addAppointment h2,
+#viewAppointment h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#textTitle {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #cbd4c2;
+    font-size: 16px;
+}
+
+#btnS {
+    background-color: #2ed573;
+}
+
+.btnC {
+    background-color: #67696d;
+}
+
+#btnD {
+    background-color: #994c4e;
+}
+
+
+#viewAppointment p {
+    margin-bottom: 20px;
 }
 
 /*Footer*/
