@@ -81,3 +81,14 @@ It contains social media platform with their respective links.
 # Testing 
 
 ## Validator Testing
+
+* No errors were returned when passing through the official W3C Markup Validator
+[W3C Validator Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarhatamannaislam.github.io%2FPortfolio2%2Findex.html)
+[W3C validator Services](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffarhatamannaislam.github.io%2FPortfolio2%2Fservices.html)
+
+* No errors were found when passing through the official W3C CSS Validator
+[W3C Validator CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffarhatamannaislam.github.io%2FPortfolio2%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+* No errors were found via JSHint
+
+<img alt="JSHint Validator" src="docs/readmeimages/jshint.png">
