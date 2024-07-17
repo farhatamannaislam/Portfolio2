@@ -4,7 +4,7 @@ Max5 Beauty and Spa is a Website for a spa that gives brief overview of its cont
 
 Users of this website can find about the services they offer, related price and discount if they have a service of certain amount. They can also find out information about the opening and closing days of the SPA via a calendar. The adress and contact information with social media links can be found via the website.
 
-The live link is [here]()
+The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 
 <img alt="Website Image" src="docs/readmeimages/responsitor.png">
 
@@ -92,3 +92,69 @@ It contains social media platform with their respective links.
 * No errors were found via JSHint
 
 <img alt="JSHint Validator" src="docs/readmeimages/jshint.png">
+
+* The site achieved a Lighthouse accessibility score of 90% to 100% which confirms that the colours and fonts chosen are easy to read and accessible.
+
+<img alt="JSHint Validator" src="docs/readmeimages/lighthousehome.png">
+<img alt="JSHint Validator" src="docs/readmeimages/lighthouseservice.png">
+
+# Links Testing
+
+* All navigation links were tested manually to ensure the user is directed to the correct section of the website.
+* Social Media links in the footer of each page were tested manually to ensure they direct the user to the correct page and open in a new tab.
+
+# Browser Testing
+
+The Website was tested on Google Chrome, Firefox, Microsoft Edge, Safari browsers with no issues noted.
+
+# Device Testing
+
+* The website was viewed on a variety of devices such as Desktop, Laptop, Tablets and Mobiles to ensure responsiveness on various screen sizes. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
+* The website is fully responsive. Responsiveness was checked via
+[Responsitor](http://www.responsinator.com/?url=https%3A%2F%2Ffarhatamannaislam.github.io%2FPortfolio2%2Findex.html)
+[Am I Responsive](https://ui.dev/amiresponsive?url=https://farhatamannaislam.github.io/Portfolio2/index.html)
+
+# Bugs
+
+There are no known bugs in the website.
+
+# Technologies Used
+
+## Languages
+* HTML
+* CSS
+* JavaScript
+
+## Frameworks - Libraries - Programs Used
+
+* [Am I Responsive](https://ui.dev/amiresponsive?url=https://farhatamannaislam.github.io/Portfolio2/index.html) used to verify responsiveness.
+* [Responsitor](http://www.responsinator.com/?url=https%3A%2F%2Ffarhatamannaislam.github.io%2FPortfolio2%2Findex.html) used to verify responsiveness.
+* [W3C HTML Validator](https://validator.w3.org/) used to verify HTML.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) used to verify CSS.
+* [JSHint](https://jshint.com/) used to verify JavaScript.
+* [Balsamiq](https://balsamiq.com/) used to create Wireframes.
+* [GitHub](https://github.com/) Used for version control and hosting.
+* [Google Fonts](https://fonts.google.com/) Used to import and alter fonts on the page.
+* [Imagesmaller](https://www.imagesmaller.com/) Used to optimize the images for web.
+* [Convertio](https://convertio.co/) Used to optimize the images for web.
+* [Flaticon](https://www.flaticon.com/) Used to get the icon for the website.
+
+# Deployment
+* In the Github repository, I navigated to Settings tab.
+* From the source section drop-down menu, I selected the main branch and Save.
+* A few moments later, the page was automatically refreshed and the link to the website was displayed on the right side of the page. 
+
+The live link can be found here - [Max5 Beauty and Spa](https://farhatamannaislam.github.io/Portfolio2/)
+
+# Credits
+The image of the website is taken from [Pixabay](https://pixabay.com/).
+Thanks to the amazing Photographer.
+
+# Resources
+* [StackOverflow](https://stackoverflow.com/)
+* [W3C School](https://www.w3schools.com/)
+* Code Institute Love Math Project
+
+# Acknowledgments
+* My mentor Antonio Rodriguez for his valueable support and advice.
+* Code Institute Slack community and tutors for their helpful responses and feedback.
