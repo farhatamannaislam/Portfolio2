@@ -13,8 +13,9 @@
     font-size: 1rem;
     letter-spacing: 3px;
     list-style-type: none;
-    color: darkblue;
+    color: rgb(25, 56, 82);
     font-weight: bold;
+    padding: 1rem;
 }
 
 /*Hero*/
@@ -26,11 +27,12 @@
 
 /*Welcome*/
 #welcome-text {
-    color: rgb(51, 2, 2);
-    text-shadow: 1px 1px 3px rgb(187, 87, 20);
+    color: rgb(2, 23, 51);
+    text-shadow: 1px 1px 3px rgb(20, 120, 187);
     font-size: 1rem;
     letter-spacing: 0.125rem;
     text-align: center;
+    padding: 1rem;
 }
 
 /*Address*/
@@ -40,22 +42,20 @@
 }
 
 #address-text {
-    color: rgb(49, 32, 126);
+    color: rgb(9, 68, 92);
     font-size: 1rem;
     letter-spacing: 0.125rem;
-    line-height: 2rem;
-    text-shadow: 1px 1px 3px rgb(176, 168, 218);
-    margin-inline: 20px;
-    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgb(168, 196, 218);
+    padding: 1rem;
 }
 
 
 /*Services*/
 #service {
-    color: rgb(71, 18, 2);
+    color: rgb(19, 85, 148);
     font-size: 1rem;
     letter-spacing: 0.125rem;
-    text-shadow: 1px 1px 3px rgb(155, 109, 95);
+    text-shadow: 1px 1px 3px rgb(95, 133, 155);
     line-height: 2rem;
     padding-top: 50px;
     padding-bottom: 20px;
@@ -65,15 +65,15 @@
 
 #sel {
     padding-top: 2rem;
-    color: rgb(49, 32, 126);
-    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    color: rgb(37, 62, 77);
+    text-shadow: 1px 1px 3px rgb(168, 196, 218);
     border-radius: 5px;
     text-align: center;
 }
 
 #selector {
-    color: rgb(49, 32, 126);
-    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    color: rgb(15, 66, 109);
+    text-shadow: 1px 1px 3px rgb(168, 198, 218);
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: rgb(31, 30, 29);
     border-radius: 5px;
@@ -81,25 +81,25 @@
 }
 
 #discount {
-    color: rgb(49, 32, 126);
-    text-shadow: 1px 1px 3px rgb(176, 168, 218);
+    color: rgb(28, 56, 92);
+    text-shadow: 1px 1px 3px rgb(69, 86, 112);
 }
 
 
 .BtnService {
-    background-color: rgb(176, 168, 218);
+    background-color: rgb(168, 190, 218);
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     border-radius: 5px;
 }
 
-#booking {
+#opening {
     text-align: center;
-    color: rgb(71, 18, 2);
-    text-shadow: 1px 1px 3px rgb(155, 109, 95);
+    color: rgb(26, 69, 124);
+    text-shadow: 1px 1px 3px rgb(106, 125, 160);
 }
 
 /*Calendar*/
-.servicecalendar{
+.servicecalendar {
     min-width: 743px;
     overflow-x: scroll;
 }
@@ -119,8 +119,9 @@
     cursor: pointer;
 }
 
-.servicecalendar .month .nextmonth:hover, .servicecalendar .month .previousmonth:hover {
-    color: lightcoral;
+.servicecalendar .month .nextmonth:hover,
+.servicecalendar .month .previousmonth:hover {
+    color: rgb(128, 173, 240);
 }
 
 .servicecalendar .daysofweek {
@@ -151,7 +152,7 @@
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color:green;
+    color: green;
 }
 
 .servicecalendar .daysofmonth .day {
@@ -172,7 +173,16 @@
 
 #social-networks-links {
     display: block;
-    margin-left: 10px;
-    margin-top: 5px;
+    /* Centers the icons horizontally */
+    align-items: center;
     text-align: center;
+    color: rgb(33, 51, 83);
+}
+
+#social-networks-links a {
+    margin: 0 10px; /* Adjusts the space between icons */
+}
+
+.day .today{
+    font-family: bold;
 }
