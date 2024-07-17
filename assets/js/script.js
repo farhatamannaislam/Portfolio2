@@ -1,4 +1,3 @@
-
 const selectService = document.querySelector("#selector");
 date = document.querySelector(".date");
 daysofmonth = document.querySelector(".daysofmonth ");
@@ -12,6 +11,7 @@ let today = new Date();
 let month = today.getMonth();
 let year = today.getFullYear();
 
+/* Function to add service*/
 function addService() {
     let price = parseFloat(selector.value);
     services.push(price);
@@ -23,6 +23,7 @@ function addService() {
     updateTotals();
 }
 
+/*Function to update total*/
 function updateTotals() {
     let totalPrice = services.reduce((sum, price) => sum + price, 0);
     let totalDiscount = totalPrice >= 100 ? totalPrice * 0.9 : totalPrice;
