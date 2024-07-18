@@ -158,7 +158,7 @@ Thanks to the amazing Photographer.
 # Resources
 * [StackOverflow](https://stackoverflow.com/)
 * [W3C School](https://www.w3schools.com/)
-* Code Institute [Love Math](https://github.com/farhatamannaislam/lovae-maths)Project
+* Code Institute [Love Math](https://github.com/farhatamannaislam/lovae-maths) Project
 
 # Acknowledgments
 * My mentor Antonio Rodriguez for his valueable support and advice.
