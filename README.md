@@ -118,6 +118,11 @@ The Website was tested on Google Chrome, Firefox, Microsoft Edge, Safari browser
 
 There are no known bugs in the website.
 
+# Future Improvements
+
+Some commit messages have slight spelling mistakes. Readme was included in 06179ed5774c6a166b4003b9a60c3e79f3a4670e. But unfortunately the commit message doesn't
+include this information. So there is a scope of improvement in commit messages.
+
 # Technologies Used
 
 ## Languages
@@ -153,7 +158,7 @@ Thanks to the amazing Photographer.
 # Resources
 * [StackOverflow](https://stackoverflow.com/)
 * [W3C School](https://www.w3schools.com/)
-* Code Institute Love Math Project
+* Code Institute [Love Math](https://github.com/farhatamannaislam/lovae-maths)Project
 
 # Acknowledgments
 * My mentor Antonio Rodriguez for his valueable support and advice.
