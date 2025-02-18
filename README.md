@@ -1,8 +1,16 @@
 # Max5 Beauty and Spa
 
-Max5 Beauty and Spa is a Website for a spa that gives brief overview of its content.
+Max5 Beauty and Spa is a modern and user-friendly website designed for a luxurious spa experience. It provides visitors with a comprehensive overview of available services, pricing, discounts, and contact information, allowing users to plan their visit effortlessly.
 
-Users of this website can find about the services they offer, related price and discount if they have a service of certain amount. They can also find out information about the opening and closing days of the SPA via a calendar. The adress and contact information with social media links can be found via the website.
+The website includes:
+
+A detailed service selection with real-time pricing updates and discounts.
+
+An interactive calendar to check opening and closing dates.
+
+A seamless booking system for scheduling appointments.
+
+Contact information and social media links for easy communication.
 
 The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 
@@ -10,10 +18,12 @@ The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 
 # Overview
 
-* The website is designed as two page website with home and service.
-* In the webpage the user gets a beautiful spa image with Address, contact information and discount information.
-* In the service page the user gets service name, related price and discount price information. They can also see a calendar with opening dates and closing dates.
-* Social media links are available in both pages.
+* The website is a two-page design (Home & Services) that ensures a smooth user experience.
+* **Home Page:** Displays spa details, an elegant hero image, contact information, and exclusive discount offers.
+* **Services Page:** Allows users to explore services, select treatments, view total pricing, and receive discounts when applicable.
+* **Appointment Booking System:** Users can schedule their spa appointments by selecting a date, time, and desired service.
+* **Social Media Links:** Available on every page for easy access.
+
 
 # Design
 
@@ -23,54 +33,44 @@ The image and icon used in this website are very important. They offer a visuall
 
 ## Fonts
 
-The Poppins font is the main font of this website. The font was importetd via [Google Fonts](https://fonts.google.com/). Sans Serif is kept as a backup font.
+The Raleway and Great Vibes font is the main font of this website ensuring a clean and modern look. The font was importetd via [Google Fonts](https://fonts.google.com/). Sans Serif is kept as a backup font.
 
 # Wireframes
 
 Wireframes are produced via Balsamiq.
 
 <details>
-  <summary>Desktop Wireframe</summary>
-  <img alt="Desktop Wireframe" src="docs/readmeimages/homedesktop.png">
+  <summary>Home Wireframe</summary>
+  <img alt="Desktop Wireframe" src="docs/readmeimages/home.png">
 </details>
 <details>
-  <summary>Desktop Wireframe</summary>
-  <img alt="Desktop Wireframe" src="docs/readmeimages/servicedesktop.png">
-</details>
-<details>
-  <summary>Mobile Wireframe</summary>
-  <img alt="Mobile Wireframe" src="docs/readmeimages/homemobile.png">
-</details>
-<details>
-  <summary>Mobile Wireframe</summary>
-  <img alt="Mobile Wireframe" src="docs/readmeimages/servicemobile.png">
+  <summary>Service Wireframe</summary>
+  <img alt="Desktop Wireframe" src="docs/readmeimages/services.png">
 </details>
 
 # Menu Navigation
 
-* It is locaed on the top left of the website.
-* It has a fixed position at the top so that users have access to the menu at all times when scrolling through the content.
+* The navigation menu is fixed at the top for easy access.
+* A hamburger menu is used on mobile devices for an optimized experience.
 
 <img alt="Navigation" src="docs/readmeimages/navigation.png">
 
 # Home Section
 
-* It has a hero image showing a beautiful and soothing spa picture.
-* It contains discount information.
-* It contains Spa address and contact information.
+* **Hero Section:** Features a stunning spa image to create a welcoming ambiance.
+* **Exclusive Discount Offer:** Encourages users to book services above 100 Euros to avail 10% discount.
+* **Contact Information:** Provides email, phone number, and address for easy communication.
 
 <img alt="Home Picture" src="docs/readmeimages/homepic1.png">
 <img alt="Home Picture" src="docs/readmeimages/homepic2.png">
 
 # Service Page
 
-* In this page user finds information about service and related price. Users can choose and add services as they like. If the price reaches a certain value user will get a discount. Discount price is shown in the page too.
+* Users can select and add multiple services.
+* Real-time price calculation shows total and discounted prices instantly.
 
 <img alt="Home Picture" src="docs/readmeimages/service.png">
 
-* There is a nice calendar showing the opening and closing dates of the spa. The spa is closed on sundays. Sundays are shown in red and all other days are shown in gree.
-
-<img alt="Home Picture" src="docs/readmeimages/calendar.png">
 
 # Website Footer
 
@@ -93,7 +93,7 @@ It contains social media platform with their respective links.
 
 <img alt="JSHint Validator" src="docs/readmeimages/jshint.png">
 
-* The site achieved a Lighthouse accessibility score of 90% to 100% which confirms that the colours and fonts chosen are easy to read and accessible.
+* The site achieved a Lighthouse accessibility score of 85% to 94% which confirms that the colours and fonts chosen are easy to read and accessible.
 
 <img alt="JSHint Validator" src="docs/readmeimages/lighthousehome.png">
 <img alt="JSHint Validator" src="docs/readmeimages/lighthouseservice.png">
