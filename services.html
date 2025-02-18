@@ -8,7 +8,7 @@
     <meta name="description" content="Entertainment, Shopping and Fun">
     <meta name="keywords" content="shopping, fun, entertainment, offers">
     <!-- Title -->
-    <title>Max5 Beauty and Spa</title>
+    <title>Max5 Beauty and Spa - Services</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
@@ -17,82 +17,79 @@
 <body>
 
     <!--Navbar-->
-    <nav>
-        <ul id="menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services, Price and Opening Days</a></li>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
         </ul>
     </nav>
 
     <main>
-        <div id="sel">
-            <p> Select a Service:
-                <select id="selector">
-                    <option value="100">Spa - 100 Euro</option>
-                    <option value="90">Sauna - 90 Euro</option>
-                    <option value="50">Facial - 50 Euro</option>
-                    <option value="60">Waxing - 60 Euro</option>
-                    <option value="70">Pedicure and Manicure - 70 Euro</option>
-                    <option value="120">Thai Massage - 120 Euro</option>
-                    <option value="120">Indian Massage - 120 Euro</option>
-                </select>
-            </p>
-            <br>
-            <button class="BtnService" onclick="addService()"> Add Service</button>
-            <div id="serviceList"></div>
-            <p>Total Price (in Euro): <span class="totalPrice">0.00</span></p>
-            <br>
-            <p>Total Discounted Price(in Euro): <span class="totalDiscount">0.00</span></p>
-            <br>
-        </div>
-        <div id="opening">
-            <h2>Appointment Calendar</h2>
-            <p>Show the opening dates in green and closing dates in red</p>
-            <div class="servicecalendar">
-                <div class="month">
-                    <i class="fa-solid fa-left-long previousmonth"></i>
-                    <div class="date"></div>
-                    <i class="fa-solid fa-right-long nextmonth"></i>
-                </div>
-                <div class="daysofweek">
-                    <div>Sunday</div>
-                    <div>Monday</div>
-                    <div>Tuesday</div>
-                    <div>Wednesday</div>
-                    <div>Thursday</div>
-                    <div>Friday</div>
-                    <div>Saturday</div>
-                </div>
-                <!--Get Days of Month from JavaScript-->
-                <div class="daysofmonth"> </div>
+        <section id="services">
+            <div class="service-info">
+                <h3>Choosing the right service for your relaxation and self-care is now easier than ever!</h3>
+
+                <p><span class="icon"></span><strong> Explore</strong> a variety of spa and beauty treatments – from
+                    luxurious massages to rejuvenating facials.</p>
+                <p><span class="icon"></span><strong> Customize</strong> your spa experience by easily adding multiple
+                    services to your session.</p>
+                <p><span class="icon"></span><strong> Save More</strong> – Automatically calculate total and discounted
+                    prices with <span class="highlight">10% off on bookings over 100 Euros.</span></p>
+                <p><span class="icon"></span><strong> Plan Ahead</strong> – See the total cost upfront before
+                    confirming your appointment.</p>
+
+                <p><strong>Select your service, see your savings, and treat yourself to the ultimate relaxation
+                        today!</strong></p>
             </div>
-        </div>
+            <h2>Select a Service</h2>
+            <select id="selector">
+                <option value="100">Spa - 100 Euro</option>
+                <option value="90">Sauna - 90 Euro</option>
+                <option value="50">Facial - 50 Euro</option>
+                <option value="60">Waxing - 60 Euro</option>
+                <option value="70">Pedicure and Manicure - 70 Euro</option>
+                <option value="120">Thai Massage - 120 Euro</option>
+                <option value="120">Indian Massage - 120 Euro</option>
+            </select>
+            </p>
+
+            <!-- Action Buttons -->
+            <button class="BtnService" onclick="addService()">Add Service</button>
+            <button class="BtnRefresh">🔄 Clear All</button>
+
+            <!-- Service List -->
+            <div id="serviceList"></div>
+
+            <!-- Price Details -->
+            <p><strong>Total Price (in Euro):</strong> <span class="totalPrice">0.00</span></p>
+            <p><strong>Total Discounted Price (in Euro):</strong> <span class="totalDiscount">0.00</span></p>
+        </section>
     </main>
+
     <!-- Footer -->
     <footer>
         <div id="social-networks-links">
-            <h2 id="social-media">Social Media Links</h2>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Link to Facebook"><i
-                    class="fa-brands fa-facebook"></i></a>
-
-
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Link to Instagram">
-                <i class="fa-brands fa-instagram"></i></a>
-
-
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Link to twitter">
-                <i class="fa-brands fa-twitter-square"></i></a>
-
-
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Link to Youtube">
-                <i class="fa-brands fa-youtube"></i></a>
-
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-twitter-square"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
         </div>
     </footer>
-    <!--Font Awesome-->
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/dc1461ab12.js" crossorigin="anonymous"></script>
-    <!-- Javascript Files-->
+    <!-- JavaScript -->
     <script src="assets/js/script.js" defer></script>
+
 </body>
 
 </html>

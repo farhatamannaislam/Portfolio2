@@ -9,57 +9,143 @@
     <meta name="keywords" content="shopping, fun, entertainment, offers">
     <!-- Title -->
     <title>Max5 Beauty and Spa</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
 </head>
 
 <body>
 
-    <!--Navbar-->
-    <nav>
-        <ul id="menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services, Price and Opening Days</a></li>
-        </ul>
-    </nav>
-    <main>
-        <img id="hero" src="assets/images/hero.webp" alt="Hero Image">
-        <div id="welcome-text">
-            <h2>Welcome to Max5 Beauty and Spa! <br>Explore our variety of services.</h2>
-            <p>Get 10% Discount from 100 Euro Service!!</p>
-            <br>
-        </div>
-        <!-- Contact -->
-        <section class="address">
-            <div id="address-text">
-                <h2>Contact Us</h2>
-                <p>Address: 10 Max Center, Weiterstadt<br>Phone: +55512345<br>email: max-spa@gmail.com</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo and Title -->
+            <div class="logo-title">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="Max5 Beauty and Spa Logo">
+                </a>
+                <h1 class="site-title text-glow">Max5 Beauty and Spa</h1>
             </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Image -->
+        <div class="hero-container">
+            <img id="hero" src="assets/images/hero.webp" alt="Relaxing Spa Experience">
+        </div>
+
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h2>Welcome to Max5 Beauty and Spa! 🌿</h2>
+            <p>
+                Escape the stress of daily life and rejuvenate your body, mind, and spirit at
+                <strong>Max5 Beauty and Spa</strong>. Our expert therapists provide a range of
+                luxurious treatments designed to help you relax, unwind, and feel your best.
+            </p>
+
+            <h3>✨ Why Choose Max5 Beauty and Spa?</h3>
+            <ul>
+                <li>🌸 **Tranquil Environment:** Experience deep relaxation in a peaceful, spa-like setting.</li>
+                <li>🌿 **Premium Treatments:** From massages to facials, we use top-quality natural products.</li>
+                <li>💆‍♀️ **Expert Therapists:** Our certified professionals ensure a soothing and rejuvenating
+                    experience.</li>
+                <li>🎁 **Exclusive Offers:** **Get 10% off** on all services above **100 Euro**.</li>
+            </ul>
+
+            <h3>🌟 Our Signature Services</h3>
+            <p>
+                Whether you're looking for stress relief, skincare, or complete wellness, we have something for
+                everyone.
+            </p>
+            <ul>
+                <li>🧖 **Luxury Spa Treatments** - Detoxify and rejuvenate your skin with our premium spa therapies.
+                </li>
+                <li>💆‍♂️ **Full-Body Massages** - Relieve tension and relax with deep tissue, Thai, and aromatherapy
+                    massages.</li>
+                <li>💅 **Beauty & Grooming** - Enjoy facials, manicures, pedicures, and waxing for a fresh new look.
+                </li>
+                <li>🧘 **Wellness Therapy** - Experience **Sauna & Steam** treatments to boost circulation and promote
+                    relaxation.</li>
+            </ul>
+
+            <!-- Book Appointment Section -->
+            <p><strong>📅 Book your appointment today and treat yourself to the ultimate relaxation!</strong></p>
+            <button class="BtnAppointment" onclick="openAppointmentForm()">Book Appointment</button>
+
+            <!-- Appointment Modal -->
+            <div id="appointmentModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeAppointmentForm()">&times;</span>
+                    <h3>📅 Book Your Appointment</h3>
+
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+
+                    <label for="userEmail">Your Email:</label>
+                    <input type="email" id="userEmail" placeholder="Enter your email" required>
+
+                    <label for="appointmentDescription">Description:</label>
+                    <textarea id="appointmentDescription" placeholder="Describe your desired service..."
+                        required></textarea>
+
+                    <label for="appointmentDate">Select Date:</label>
+                    <input type="date" id="appointmentDate" required>
+
+                    <label for="appointmentTime">Time:</label>
+                    <input type="time" id="appointmentTime" required>
+
+                    <button onclick="confirmAppointment()">Confirm</button>
+                </div>
+            </div>
+
+
+            <!-- Display Booked Appointments -->
+            <h3>📋 Your Appointments:</h3>
+            <ul id="appointmentList"></ul>
+
+
+        </section>
+
+
+        <!-- Contact Information -->
+        <section id="contactInfo">
+            <h3>📍 Contact Information</h3>
+            <p><strong>Address:</strong> 10 Max Street, Weiterstadt</p>
+            <p><strong>Email:</strong> <a href="mailto:maxspa@gmail.com">maxspa@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+55512345">+55512345</a></p>
         </section>
     </main>
 
-
     <!-- Footer -->
     <footer>
-        
         <div id="social-networks-links">
-            <h2>Social Media Links</h2>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Link to Facebook"><i
-                    class="fa-brands fa-facebook"></i></a>
-
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Link to Instagram">
-                <i class="fa-brands fa-instagram"></i></a>
-
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Link to twitter">
-                <i class="fa-brands fa-twitter-square"></i></a>
-
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Link to Youtube">
-                <i class="fa-brands fa-youtube"></i></a>
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
         </div>
     </footer>
-    <!--Font Awesome-->
+
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/dc1461ab12.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" defer></script>
+
 
 </body>
 
