@@ -1,114 +1,119 @@
-const selectService = document.querySelector("#selector");
-date = document.querySelector(".date");
-daysofmonth = document.querySelector(".daysofmonth ");
-daysofweek = document.querySelector(".daysofweek");
-nextmonth = document.querySelector(".nextmonth");
-previousmonth = document.querySelector(".previousmonth");
+const selectService = document.querySelector("#selector"); // ✅ Correct ID
 const serviceList = document.getElementById("serviceList");
-let services = [];
+let services = JSON.parse(localStorage.getItem("services")) || []; // ✅ Ensure it's an array
 
-let today = new Date();
-let month = today.getMonth();
-let year = today.getFullYear();
-
-/* Function to add service*/
+// ✅ Function to Add Service
 function addService() {
-    let price = parseFloat(selector.value);
-    services.push(price);
-    
-    let serviceItem = document.createElement('p');
+    let price = parseFloat(selectService.value);
+    if (isNaN(price)) {
+        console.error("❌ ERROR: Invalid service price selected.");
+        return;
+    }
+
+    services.push(price); // ✅ Push price to array
+    localStorage.setItem("services", JSON.stringify(services)); // ✅ Save to localStorage
+
+    let serviceItem = document.createElement("p");
     serviceItem.textContent = `Service - ${price.toFixed(2)} Euro`;
     serviceList.appendChild(serviceItem);
-    
-    updateTotals();
+
+    updateTotals(); // ✅ Update total
 }
 
-/*Function to update total*/
+// ✅ Function to Update Totals
 function updateTotals() {
     let totalPrice = services.reduce((sum, price) => sum + price, 0);
     let totalDiscount = totalPrice >= 100 ? totalPrice * 0.9 : totalPrice;
-    
+
     document.querySelector('.totalPrice').textContent = totalPrice.toFixed(2);
     document.querySelector('.totalDiscount').textContent = totalDiscount.toFixed(2);
 }
 
-const monthsofYear = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-];
+const clearButton = document.querySelector(".BtnRefresh"); // Ensure correct class
 
-/*Get current months days,previous month days and next month days*/
-function addCalendar() {
-    const dateFirst = new Date(year, month, 1);
-    const dateLast = new Date(year, month + 1, 0);
-    const previousLastDate = new Date(year, month, 0);
-    const prevDay = previousLastDate.getDate();
-    const lastDay = dateLast.getDate();
-    const firstDay = dateFirst.getDay();
-    const nextDay = 7 - dateLast.getDay() - 1;
-
-    date.innerHTML = monthsofYear[month] + " " + year;
-
-    let dayHTML = "";
-
-    // Days of Previous Month
-    for (let i = firstDay; i > 0; i--) {
-        let prevDate = prevDay - i + 1;
-        let currentDate = new Date(year, month - 1, prevDate);
-        dayHTML += generateDayHTML(prevDate, currentDate.getDay() === 0);
-    }
-
-    // Days of Current Month
-    for (let i = 1; i <= lastDay; i++) {
-        let currentDate = new Date(year, month, i);
-        dayHTML += generateDayHTML(i, currentDate.getDay() === 0);
-    }
-
-    // Days of Next Month
-    for (let i = 1; i <= nextDay; i++) {
-        let currentDate = new Date(year, month + 1, i);
-        dayHTML += generateDayHTML(i, currentDate.getDay() === 0);
-    }
-
-    daysofmonth.innerHTML = dayHTML;
+if (clearButton) {
+    clearButton.addEventListener("click", clearAllServices);
 }
 
-// Helper function to generate day elements
-function generateDayHTML(day, isSunday) {
-    return `<div class="day${isSunday ? ' red' : ''}">${day}</div>`;
+// ✅ Function to Clear All Services
+function clearAllServices() {
+    localStorage.removeItem("services"); // ✅ Remove stored services
+    services = []; // ✅ Reset array in memory
+    document.getElementById("serviceList").innerHTML = ""; // ✅ Clear UI
+    updateTotals(); // ✅ Update total prices
 }
 
-//Show previousMonth
-function previousMonth() {
-    month--;
-    if (month < 0) {
-        month = 11;
-        year--;
+
+/* --------------------- APPOINTMENT FUNCTIONALITY (index.html) --------------------- */
+
+// ✅ Setup appointment buttons
+function setupAppointmentButtons() {
+    const appointmentBtn = document.querySelector(".BtnAppointment");
+    if (appointmentBtn) appointmentBtn.addEventListener("click", openAppointmentForm);
+}
+
+// ✅ Open the appointment modal
+function openAppointmentForm() {
+    const modal = document.getElementById("appointmentModal");
+    if (modal) modal.style.display = "block";
+}
+
+// ✅ Close the appointment modal
+function closeAppointmentForm() {
+    const modal = document.getElementById("appointmentModal");
+    if (modal) modal.style.display = "none";
+}
+
+// ✅ Confirm & Save Appointment
+function confirmAppointment() {
+    let name = document.getElementById("userName").value;
+    let email = document.getElementById("userEmail").value;
+    let description = document.getElementById("appointmentDescription").value;
+    let date = document.getElementById("appointmentDate").value;
+    let time = document.getElementById("appointmentTime").value;
+
+    if (!name || !email || !description || !date || !time) {
+        alert("❌ Please fill out all fields!");
+        return;
     }
-    addCalendar();
+
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    appointments.push({ name, email, description, date, time });
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    closeAppointmentForm();
+    renderAppointments();
 }
 
-//Show next Month
-function nextMonth() {
-    month++;
-    if (month > 11) {
-        month = 0;
-        year++;
+// ✅ Render Appointments
+function renderAppointments() {
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    let appointmentList = document.getElementById("appointmentList");
+
+    if (!appointmentList) {
+        console.error("❌ ERROR: appointmentList not found in the DOM!");
+        return;
     }
-    addCalendar();
+
+    appointmentList.innerHTML = ""; // Clear list
+
+    appointments.forEach((appointment, index) => {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = `
+            <strong>👤 ${appointment.name}</strong> | 📧 ${appointment.email}<br>
+            📅 ${appointment.date} - ⏰ ${appointment.time}<br>
+            💬 ${appointment.description}<br>
+            <button class="deleteBtn" onclick="deleteAppointment(${index})">❌ Remove</button>
+        `;
+        appointmentList.appendChild(listItem);
+    });
 }
 
-nextmonth.addEventListener("click", nextMonth);
-previousmonth.addEventListener("click", previousMonth);
 
-addCalendar();
+// ✅ Delete an appointment
+function deleteAppointment(index) {
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    appointments.splice(index, 1);
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+    renderAppointments();
+}
