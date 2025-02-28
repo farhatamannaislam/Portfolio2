@@ -2,6 +2,7 @@ const selectService = document.querySelector("#selector"); // ✅ Correct ID
 const serviceList = document.getElementById("serviceList");
 let services = JSON.parse(localStorage.getItem("services")) || []; // ✅ Ensure it's an array
 
+
 // ✅ Function to Add Service
 function addService() {
     let price = parseFloat(selectService.value);
@@ -78,7 +79,10 @@ function confirmAppointment() {
     }
 
     let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    appointments.push({ name, email, description, date, time });
+    let newAppointment = { name, email, description, date, time };
+    appointments.push(newAppointment);
+
+    console.log("📝 Saving Appointment:", newAppointment); // Debugging
     localStorage.setItem("appointments", JSON.stringify(appointments));
 
     closeAppointmentForm();
@@ -87,17 +91,30 @@ function confirmAppointment() {
 
 // ✅ Render Appointments
 function renderAppointments() {
-    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    let appointmentList = document.getElementById("appointmentList");
+    console.log("🔄 Running renderAppointments...");
 
+    let appointmentList = document.getElementById("appointmentList");
     if (!appointmentList) {
-        console.error("❌ ERROR: appointmentList not found in the DOM!");
+        console.error("❌ ERROR: appointmentList not found!");
         return;
     }
 
-    appointmentList.innerHTML = ""; // Clear list
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    console.log("📋 Loaded Appointments from localStorage:", appointments);
+
+    // Clear the UI before rendering
+    appointmentList.innerHTML = "";
+    console.log("📌 Cleared appointmentList before rendering.");
+
+    if (appointments.length === 0) {
+        console.log("⚠️ No appointments found!");
+        appointmentList.innerHTML = "<p>📌 No appointments found!</p>";
+        return;
+    }
 
     appointments.forEach((appointment, index) => {
+        console.log(`📌 Rendering Appointment ${index + 1}:`, appointment);
+
         let listItem = document.createElement("li");
         listItem.innerHTML = `
             <strong>👤 ${appointment.name}</strong> | 📧 ${appointment.email}<br>
@@ -105,8 +122,11 @@ function renderAppointments() {
             💬 ${appointment.description}<br>
             <button class="deleteBtn" onclick="deleteAppointment(${index})">❌ Remove</button>
         `;
+
         appointmentList.appendChild(listItem);
     });
+
+    console.log("✅ Appointments Rendered Successfully!");
 }
 
 
@@ -117,3 +137,8 @@ function deleteAppointment(index) {
     localStorage.setItem("appointments", JSON.stringify(appointments));
     renderAppointments();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ Page Loaded! Rendering Appointments...");
+    renderAppointments();
+});
