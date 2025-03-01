@@ -65,7 +65,7 @@ function closeAppointmentForm() {
     if (modal) modal.style.display = "none";
 }
 
-// ✅ Confirm & Save Appointment
+// ✅ Confirm & Save Appointment (with 1-hour gap check)
 function confirmAppointment() {
     let name = document.getElementById("userName").value;
     let email = document.getElementById("userEmail").value;
@@ -79,6 +79,19 @@ function confirmAppointment() {
     }
 
     let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    let newAppointmentTime = new Date(`${date}T${time}`);
+
+    // ✅ Check if new appointment is at least 1 hour apart from existing ones
+    for (let appointment of appointments) {
+        let existingTime = new Date(`${appointment.date}T${appointment.time}`);
+        let timeDiff = Math.abs(existingTime - newAppointmentTime) / (1000 * 60); // Difference in minutes
+
+        if (appointment.date === date && timeDiff < 60) {
+            alert("❌ Cannot book this appointment! There must be at least a 1-hour gap between appointments.");
+            return;
+        }
+    }
+
     let newAppointment = { name, email, description, date, time };
     appointments.push(newAppointment);
 
@@ -88,6 +101,7 @@ function confirmAppointment() {
     closeAppointmentForm();
     renderAppointments();
 }
+
 
 // ✅ Render Appointments
 function renderAppointments() {
