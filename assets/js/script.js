@@ -101,8 +101,6 @@ function confirmAppointment() {
 
     let newAppointment = { name, email, description, date, time };
     appointments.push(newAppointment);
-
-    console.log("📝 Saving Appointment:", newAppointment); // Debugging
     localStorage.setItem("appointments", JSON.stringify(appointments));
 
     closeAppointmentForm();
@@ -116,25 +114,19 @@ function renderAppointments() {
 
     let appointmentList = document.getElementById("appointmentList");
     if (!appointmentList) {
-        console.error("❌ ERROR: appointmentList not found!");
         return;
     }
-
     let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    console.log("📋 Loaded Appointments from localStorage:", appointments);
 
     // Clear the UI before rendering
     appointmentList.innerHTML = "";
-    console.log("📌 Cleared appointmentList before rendering.");
 
     if (appointments.length === 0) {
-        console.log("⚠️ No appointments found!");
         appointmentList.innerHTML = "<p>📌 No appointments found!</p>";
         return;
     }
 
     appointments.forEach((appointment, index) => {
-        console.log(`📌 Rendering Appointment ${index + 1}:`, appointment);
 
         let listItem = document.createElement("li");
         listItem.innerHTML = `
@@ -146,8 +138,6 @@ function renderAppointments() {
 
         appointmentList.appendChild(listItem);
     });
-
-    console.log("✅ Appointments Rendered Successfully!");
 }
 
 
