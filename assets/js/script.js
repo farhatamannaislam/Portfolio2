@@ -65,7 +65,7 @@ function closeAppointmentForm() {
     if (modal) modal.style.display = "none";
 }
 
-// ✅ Confirm & Save Appointment (with 1-hour gap check)
+// ✅ Confirm & Save Appointment (with 1-hour gap check & time restriction)
 function confirmAppointment() {
     let name = document.getElementById("userName").value;
     let email = document.getElementById("userEmail").value;
@@ -80,6 +80,13 @@ function confirmAppointment() {
 
     let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
     let newAppointmentTime = new Date(`${date}T${time}`);
+
+    // ✅ Restrict booking time between 11:00 AM - 7:00 PM
+    let hours = newAppointmentTime.getHours();
+    if (hours < 11 || hours >= 19) {
+        alert("❌ Appointments can only be booked between 11:00 AM and 7:00 PM.");
+        return;
+    }
 
     // ✅ Check if new appointment is at least 1 hour apart from existing ones
     for (let appointment of appointments) {
