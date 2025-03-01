@@ -4,13 +4,11 @@ Max5 Beauty and Spa is a modern and user-friendly website designed for a luxurio
 
 The website includes:
 
-A detailed service selection with real-time pricing updates and discounts.
+* A detailed service selection with real-time pricing updates and discounts.
 
-An interactive calendar to check opening and closing dates.
+* A seamless booking system for scheduling appointments.
 
-A seamless booking system for scheduling appointments.
-
-Contact information and social media links for easy communication.
+* Contact information and social media links for easy communication.
 
 The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 
@@ -19,9 +17,8 @@ The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 # Overview
 
 * The website is a two-page design (Home & Services) that ensures a smooth user experience.
-* **Home Page:** Displays spa details, an elegant hero image, contact information, and exclusive discount offers.
+* **Home Page:** Displays spa details, an elegant hero image, apoointment booking system, contact information, and exclusive discount offers.
 * **Services Page:** Allows users to explore services, select treatments, view total pricing, and receive discounts when applicable.
-* **Appointment Booking System:** Users can schedule their spa appointments by selecting a date, time, and desired service.
 * **Social Media Links:** Available on every page for easy access.
 
 
@@ -29,7 +26,7 @@ The live link is [here](https://farhatamannaislam.github.io/Portfolio2/)
 
 ## Imagery
 
-The image and icon used in this website are very important. They offer a visually appealing scenario to the user. The website color is very soothing.
+The website features carefully chosen images and icons to create a visually appealing and relaxing user experience.
 
 ## Fonts
 
@@ -51,7 +48,6 @@ Wireframes are produced via Balsamiq.
 # Menu Navigation
 
 * The navigation menu is fixed at the top for easy access.
-* A hamburger menu is used on mobile devices for an optimized experience.
 
 <img alt="Navigation" src="docs/readmeimages/navigation.png">
 
@@ -66,10 +62,12 @@ Wireframes are produced via Balsamiq.
 
 # Service Page
 
-* Users can select and add multiple services.
+* Users can select and add multiple services. Encourages the user about discount.
 * Real-time price calculation shows total and discounted prices instantly.
+* Contains pleasant images from spa to captivate users.
 
-<img alt="Home Picture" src="docs/readmeimages/service.png">
+<img alt="Spa Picture" src="docs/readmeimages/spa.png">
+<img alt="Service Picture" src="docs/readmeimages/service.png">
 
 
 # Website Footer
@@ -93,10 +91,10 @@ It contains social media platform with their respective links.
 
 <img alt="JSHint Validator" src="docs/readmeimages/jshint.png">
 
-* The site achieved a Lighthouse accessibility score of 85% to 94% which confirms that the colours and fonts chosen are easy to read and accessible.
+* The site achieved a Lighthouse accessibility score of 77% to 99% which confirms that the colours and fonts chosen are easy to read and accessible.
 
-<img alt="JSHint Validator" src="docs/readmeimages/lighthousehome.png">
-<img alt="JSHint Validator" src="docs/readmeimages/lighthouseservice.png">
+<img alt="Lighthouse Home" src="docs/readmeimages/lighthousehome.png">
+<img alt="Lighthouse servicer" src="docs/readmeimages/lighthouseservice.png">
 
 # Links Testing
 
