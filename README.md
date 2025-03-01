@@ -58,7 +58,7 @@ Wireframes are produced via Balsamiq.
 * **Appointment Booking:** Provides appointment booking option for the user. Users can book appointment between 11AM to 19PM. Two appointments can not be booked in the same time. Appointments must be 1hr apart.
 * **View Appointment:** The booked appointments ares shown. User has the ability to delete the appointments.
 * **Contact Information:** Provides email, phone number, and address for easy communication.
-* **Contact Information:** Provides opening hours information for the user.
+* **Opening Hour:** Provides opening hours information for the user.
 
 <img alt="Home Picture" src="docs/readmeimages/homepic1.png">
 <img alt="Home Picture" src="docs/readmeimages/homepic2.png">
