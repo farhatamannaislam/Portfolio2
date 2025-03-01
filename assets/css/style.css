@@ -58,7 +58,7 @@ main {
 }
 
 .navbar ul li a:hover {
-    color: #2E8B2A;
+    color: #4C3B4D;;
 }
 
 /* Logo & Title */
@@ -124,7 +124,7 @@ ul {
 
 /* Appointment Button */
 .BtnAppointment {
-    background-color: #43a047;
+    background-color: #782d26;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -135,7 +135,7 @@ ul {
 }
 
 .BtnAppointment:hover {
-    background-color: #388e3c;
+    background-color: #4C3B4D;
 }
 
 .BtnService, .BtnRefresh {
@@ -147,7 +147,6 @@ ul {
 
 #services p{
     font-size: 1.25rem;
-    color:#0b7a75;
 }
 
 .service-info {
@@ -162,7 +161,7 @@ ul {
 }
 
 .service-info h2 {
-    color: #782d26; /* Deep red for emphasis */
+    color: #782d26; /* Deep #782d26 for emphasis */
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
@@ -173,7 +172,7 @@ ul {
 
 .service-info .highlight {
     font-weight: bold;
-    color: #e63946;
+    color: #782d26;
 }
 
 .service-info .icon {
@@ -203,7 +202,7 @@ ul {
 }
 
 .close {
-    color: red;
+    color: #782d26;
     float: right;
     font-size: 24px;
     cursor: pointer;
@@ -216,14 +215,13 @@ ul {
 }
 
 #appointmentList li {
-    background: #f4f4f4;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
 }
 
 .deleteBtn {
-    background: red;
+    background: #782d26;
     color: white;
     border: none;
     cursor: pointer;
@@ -233,16 +231,13 @@ ul {
 }
 
 .deleteBtn:hover {
-    background: darkred;
+    background: #782d26;
 }
 
 
 /* Contact Information */
 #contactInfo {
-    background: #f0f3f5;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 20px auto;
 }
@@ -287,7 +282,6 @@ a:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
